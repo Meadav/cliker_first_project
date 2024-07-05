@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Простой кликкер</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        padding-top: 50px;
+    }
+    #score {
+        font-size: 48px;
+        margin-bottom: 20px;
+    }
+    #clickButton {
+        padding: 20px 50px;
+        font-size: 24px;
+        cursor: pointer;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        outline: none;
+    }
+    #clickButton:hover {
+        background-color: #45a049;
+    }
+</style>
+</head>
+<body>
+    <h1>Простой кликкер</h1>
+    <p>Нажимай на кнопку, чтобы набрать очки:</p>
+    <p id="score">0</p>
+    <button id="clickButton" onclick="incrementScore()">Нажми меня!</button>
+
+    <script>
+        let score = 0;
+
+        function incrementScore() {
+            score++;
+            document.getElementById('score').textContent = score;
+        }
+    </script>
+</body>
+</html>
